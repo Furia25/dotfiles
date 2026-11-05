@@ -1,0 +1,85 @@
+# ~/.config/starship.toml
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 500
+
+format = """
+[\\[](bold fg:189)$username[:](fg:69)$time $directory[\\]](bold fg:189)\
+$git_branch$git_status$git_state\
+$python$nodejs$rust$golang\
+$jobs$character"""
+
+[username]
+show_always = true
+format = '[$user]($style)'
+style_user = 'fg:177'
+style_root = 'bold red'
+
+[time]
+disabled = false
+time_format = '%H:%M'
+format = '[$time]($style)'
+style = 'fg:189'
+
+[directory]
+truncation_length = 3
+truncation_symbol = '…/'
+truncate_to_repo = true
+format = '[$path]($style)[$read_only]($read_only_style)'
+style = 'fg:147'
+read_only = ' ro'
+read_only_style = 'fg:203'
+
+[git_branch]
+symbol = ''
+format = ' [$symbol$branch]($style)'
+style = 'fg:69'
+
+[git_status]
+format = '( [$all_status$ahead_behind]($style))'
+style = 'fg:177'
+
+[git_state]
+format = '( [$state( $progress_current/$progress_total)]($style))'
+style = 'fg:221'
+
+[python]
+symbol = 'py '
+format = '( [$symbol$version( $virtualenv)]($style))'
+style = 'fg:221'
+
+[nodejs]
+symbol = 'node '
+format = '( [$symbol$version]($style))'
+style = 'fg:114'
+
+[rust]
+symbol = 'rs '
+format = '( [$symbol$version]($style))'
+style = 'fg:209'
+
+[golang]
+symbol = 'go '
+format = '( [$symbol$version]($style))'
+style = 'fg:81'
+
+[jobs]
+symbol = '✦'
+threshold = 1
+format = '( [$symbol$number]($style))'
+style = 'fg:221'
+
+[character]
+success_symbol = '[\$](italic)'
+error_symbol = '[\$](italic bold red)'
+
+# Désactivés : tu ne voulais plus la durée ni le status
+[cmd_duration]
+disabled = true
+
+[status]
+disabled = true
+
+[package]
+disabled = true

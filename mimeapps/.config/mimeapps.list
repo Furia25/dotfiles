@@ -1,0 +1,14 @@
+[Added Associations]
+application/x-directory=org.kde.dolphin.desktop;
+application/zip=7z-6.desktop;7z-5.desktop;7z-4.desktop;7z-3.desktop;7z-2.desktop;7z.desktop;
+image/gif=/home/vdurand/.local/share/applications/eog-5.desktop;
+image/png=/home/vdurand/.local/share/applications/eog-8.desktop;
+inode/directory=org.kde.dolphin.desktop;kitty-open.desktop
+video/mp4=eog.desktop;
+video/webm=firefox-2.desktop;
+x-directory/normal=org.kde.dolphin.desktop;
+
+[Default Applications]
+image/png=/home/vdurand/.local/share/applications/eog-8.desktop;
+inode/mount-point=org.kde.dolphin.desktop
+x-scheme-handler/terminal=kitty.desktop

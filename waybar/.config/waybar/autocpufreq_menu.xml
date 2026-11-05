@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    
+    <!-- Label non cliquable -->
+    <child>
+      <object class="GtkMenuItem" id="label_title">
+        <property name="label">Set to</property>
+        <property name="sensitive">False</property>
+      </object>
+    </child>
+
+    <!-- Ligne de séparation -->
+    <child>
+      <object class="GtkSeparatorMenuItem"/>
+    </child>
+
+    <!-- Options cliquables -->
+    <child>
+      <object class="GtkMenuItem" id="performance">
+        <property name="label">Performance</property>
+      </object>
+    </child>
+    
+    <child>
+      <object class="GtkMenuItem" id="balanced">
+        <property name="label">Balanced</property>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkMenuItem" id="powersave">
+        <property name="label">Powersave</property>
+      </object>
+    </child>
+
+  </object>
+</interface>
+
